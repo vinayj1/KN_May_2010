@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @blog.title %>
+</p>
+
+<p>
+  <b>Publish date:</b>
+  <%=h @blog.publish_date %>
+</p>
+
+<p>
+  <b>Web link:</b>
+  <a href="<%=h @blog.web_link %>"><%=h @blog.web_link %></a>
+</p>
+
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Blogs', blogs_path %>

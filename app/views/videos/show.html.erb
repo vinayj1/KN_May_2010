@@ -1,0 +1,32 @@
+<p>
+  <b>Title:</b>
+  <%= h @video.title %>
+</p>
+
+<p>
+  <b>Publish date:</b>
+  <%= h @video.publish_date %>
+</p>
+
+<p>
+  <b>Web link:</b>
+  <a href="<%= h @video.web_link %>"><%= h @video.web_link %></a>
+</p>
+
+<!-- <object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/6gvtc4zO47Q&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6gvtc4zO47Q&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object> -->
+
+
+<%= @video.web_link %>
+
+<!--
+<object width="480" height="385">
+  <param name="movie" value="<%= h @video.web_link %>" />
+  <param name="allowFullScreen" value="true" />
+  <param name="allowscriptaccess" value="always" />
+  <embed src="<%= h @video.web_link %>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed>
+</object>
+        -->
+<p></p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Videos', videos_path %>

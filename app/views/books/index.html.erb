@@ -1,0 +1,29 @@
+<h1>Books listing</h1>
+
+<table>
+
+  <tr>
+    <th>Image preview</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Purchase web link</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @books.each do |book| %>
+      <tr>
+        <td width="78" halign="center"><img src="<%= h book.image_link %>" alt="No image found" width="75" height="100"/></td>
+        <td width="200"><%= h book.title %></td>
+        <td width="350"><%= h truncate_words(book.description) %></td>
+        <td width="100"><a href="<%= h book.purchase_web_link %>"><%= h truncate_letters(book.purchase_web_link) %></a>
+        </td>
+        <td width="120"><%= link_to 'Show', book %> <%= link_to 'Edit', edit_book_path(book) %> <%= link_to 'Delete', book, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<%= link_to 'New book', new_book_path %>
+<p>
+<%= link_to 'Home', root_path %>

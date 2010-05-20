@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%= h @book.title %>
+</p>
+
+<p>
+  <b>Purchase web link:</b>
+  <a href="<%= h @book.purchase_web_link %>"><%= h @book.purchase_web_link %></a>
+</p>
+
+<p>
+  <b>Image link:</b>
+  <a href="<%= h @book.image_link %>"><%= h @book.image_link %></a> <br>
+  <img src="<%= h @book.image_link %>" alt="Image not found at the URL.  Please check the URL and provide correction through Edit action."/>
+</p>
+
+<p>
+  <b>Description:</b>
+<pre><%= h @book.description %> </pre>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Books', books_path %>

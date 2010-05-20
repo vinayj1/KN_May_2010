@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @application.title %>
+</p>
+
+<p>
+  <b>Web link:</b>
+  <a href="<%=h @application.web_link %>"><%=h @application.web_link %></a>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @application.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Applications', applications_path %>
